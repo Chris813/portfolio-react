@@ -19,8 +19,6 @@
     transition: width 0.3s ease-out 0s;
 }
 .navBar{
-    &.scrolled{
-    }
     display: flex;
     position: fixed;
     width: 100%;
