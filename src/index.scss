@@ -1,0 +1,41 @@
+@font-face {
+    font-family: ZCOOL;
+    src: url('./assets//fonts/ZCOOLKuaiLe-Regular.ttf');
+    font-weight: 400;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: 'ZCOOL', sans-serif !important;
+    background-color: #121212 !important;
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    color: #fff;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+#root {
+    height:100vh;
+}

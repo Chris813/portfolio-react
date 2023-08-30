@@ -1,0 +1,30 @@
+@import '../Variables/variables.scss';
+@import '//at.alicdn.com/t/c/font_4231216_ihnmwmi3nl.css';
+.skills{
+    background-color: black ;
+    border-radius: 20px;
+    width:80%;
+    margin: 30px auto;
+    padding: 20px;
+    .skills-content{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        margin: 0 auto;
+        .skills-content-item {
+            border: 2px solid $highlight-color;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+            width: 150px;
+            height: 150px;
+            font: {
+                size: 1.5rem;
+                weight: 700;
+            };
+            .iconfont{
+                font-size: 80px;
+            }
+        }
+    }
+
+}

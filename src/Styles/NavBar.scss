@@ -1,0 +1,73 @@
+@import '../Variables/variables.scss';
+@font-face {
+    font-family: ZCOOL;
+    src: url('../assets/fonts/ZCOOLKuaiLe-Regular.ttf');
+    font-weight: 400;
+  }
+
+@mixin menu-item-after {
+    content: '';
+    height:5px;
+    width: 0;
+    background-color: $menu-item-active-color;
+    position: absolute;
+    bottom: 0;
+    left: 17px;
+    border-radius: 16px;
+    border-bottom-width: 0px !important;          
+    border-bottom-color: none !important;
+    transition: width 0.3s ease-out 0s;
+}
+.navBar{
+    &.scrolled{
+    }
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    justify-content: space-between;
+    z-index: 9999;
+    .logo {
+        width: 60px; // 根据你的需要设置宽度和高度
+        height: 60px; // 根据你的需要设置宽度和高度
+        border-radius: 50%; // 将边框半径设置为50%以创建圆形
+        overflow: hidden; // 隐藏图像超出部分
+        img {
+          width: 100%; // 使图像充满整个容器
+          height: 100%; // 使图像充满整个容器
+          object-fit: cover; // 根据需要调整图像填充方式
+        }
+    }
+    .ant-menu {
+        margin-left: auto;
+        font-family: 'ZCOOL', sans-serif !important;
+        background-color: transparent;
+        color: white;
+        font-size: 25px;
+        width: 600px;
+        line-height: 3rem !important;
+        display: flex;
+        align-items: center;
+        .ant-menu-item {
+            padding: 0 2rem;
+            &.ant-menu-item-selected {
+                color: white !important;
+                &::after {
+                    width: 80%;
+                }         
+        }
+            &:hover {
+                color: white !important;
+                &::after{
+                    width: 80%;
+                }
+            }
+            &::after {
+                @include menu-item-after;
+            }
+    
+        }
+    
+    }
+
+}
